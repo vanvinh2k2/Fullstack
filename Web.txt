@@ -1,0 +1,257 @@
+:root tham chiếu đến thuộc tính gốc
+:active click để đổi màu
+:first-child phần tử đầu 
+:last-child phần tử cuối
+::first-letter Css chữ cái đầu tiên
+::first-line Css dòng đầu tên
+::selection Css khi bôi đen
+background-image: linear-gradient(180deg,rgba(255,255,0,0.5),rgba(0,255,255,0.5)),url(link);
+-------------------------------------------------------------------------------------------------------------------------------------------
+PHP
+$c = array_combine($a,$b) + keys với values
+array_keys($c) or array_values($c)
+isset($_GET['name']) kt có tham số name chưa
+setcookie(key,values,time);
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Docker
+docker build -t new-image .  
+docker run -p 8000:8000 new-image
+docker ps
+pip freeze > requirements.txt
+docker-compose run --rm api sh -c "django-admin startproject api ."
+---------------------------------------------------------------------------------------------------------------------------------------------
+JS
+window.innerWidth lay do rong
+if(/[0-9]/.test(values))
+if(/[^0-9a-zA-Z]/.test(values))
+document.getElementById("namId").innerHTML=""
+document.getElementById("namId").src='image.png'
+document.getElementById("namId").style.fontSize = '45px'
+document.getElementById("namId").value
+isNaN()
+cart_input.setAttribute('onclick', 'delete1(this)');
+onmouseover='' onmouseout=''
+onload=''; load img
+hinh[i] = new Image();
+hinh[i].src = 'image.png';
+.focus();
+giatri.innerText.toLowerCase().includes(valuesearch)
+const api = await fetch("https://randomuser.me/api?results=10");
+const { results } = await api.json();
+
+onmousemove = 'a';
+a.clientX, clientY;
+ondragstart
+ondrop=''; nhan image
+ondragover='' tha mouse;
+
+let endDay = Date('01/01/2023 00:00:00').getTime();
+let check = setInterval( function(){
+	let now = new Date().getTime();
+	let distance = endDate-now;
+	let day = Math.floor(distance/(24*60*60*1000));
+},1000);
+
+let item = null;
+        function onDrag(event){
+            item = event.target.src;
+            console.log(item)
+        }
+        function onDrop(event){
+            let img = document.createElement('img');
+            img.src = item;
+            document.querySelector(".image").innerHTML = '';
+            document.querySelector(".image").appendChild(img);
+        }
+        function onAllow(event){
+            event.preventDefault();
+        }
+
+document.forms['form-infor']['msv'].value
+input.addEventListener('keyup', function(e){
+    if(e.key === 'Enter')
+
+-------------------------------------------------------------------------------------------------------------------------------
+GIT
+Remove-Item -Recurse -Force .git
+npm install react-scripts --save
+PS C:\Users\Ngo Van Vinh> git config --global user.email "vinhngo240302@gmail.com"
+PS C:\Users\Ngo Van Vinh> git config --global user.name "vinhngo24"                       
+PS C:\Users\Ngo Van Vinh> got config --list
+git init
+git add + name.file
+lưu all : git add .
+git commit -m"Khoi tao"
+xem phiên bản: git log --oneline
+kiểm tra lưu trử: git status
+xem infor người comit : git log
+phục hồi file đã xóa: git restore .
+xem thay đổi gì: git diff -> git add . (--staged) so sanh luu voi data git
+phục hồi lại nội dung cũ : git checkout mã -- tên file
+commit vào cái trước : git commit --amend -m"Commit 1, .ingnore"
+git diff id1 id2 --stat xem chi tiết thay đổi
+đưa về modifile: git restore --staged
+xóa commit phục hồi: git reset --soft HEAD~1
+Xóa ko phục hồi : git reset --hard HEAD~1
+ git merge sualoigap
+ git branch -d alpha
+lấy nội dung 1 ::diffg LO ngược lại ::difg RE ko lấy là BA
+git rebase name.file lấy branch đầu làm cơ sở
+git rebase --continue để tiếp tục , i để sửa Ctrl + c ->:wq
+git remote add ...
+xóa git remote rm name
+git push -u orgin master
+git clone link tải code về
+git fetch lấy thông tin để tra
+git pull lấy thông tin trộn vào luôn
+git tag -a"name" -m"ghi chu" id
+git show nameTag để xem thông tin chi tiết
+git tag -d nameTag để xóa
+git push origin namtag
+git push origin --tags đẩy tất cả tag lên
+-------------------------------------------------------------------------------------------------------------------------------
+ReactJS
+npx create-react-app name
+npm install --save-exact react-toastify@8.0.2
+npm install --save--exact react-router-dom@5.3.0
+npm install axios
+--------------------------------------------------------------------------------------------------------------------------------
+lấy n số: getcontext().prec = n
+phân số: fraction
+ngẫu nhiên 0<x<1: rand()
+ngẫu nhiên a<=x<b: randrange(a,b)
+ngẫu nhiên a<=x<b bước k: randrange(a,b,k)
+ngẫu nhiên thực: uniform(a,b)
+ngẫu nhiên str trong a: choice(s)
+---ab---:s.center(8,"-"),s.ljust(20,"-"),s.rjust(20,"-")
+chữ cái đầu câu viết hoa: s.capitalize()
+chữ thường hết: s.lower(),s.upper() là ngược lại
+đảo hoa-thường: s.swapcase()
+chữ cái đầu từ viết hoa: s.title()
+
+pip install django
+django-admin startproject name
+A.objects.get_or_create()
+A.objects.filter(a__contains="j") or startswith | endswith
+print(a.query)
+c.lesson_set.all()
+create_date__month__range=[7,10]
+create_date__month__in=[7,10,5]
+create_date__month__gte=7 lon hon lte la nho hon
+https://docs.djangoproject.com/en/3.2/ref/models/querysets/
+
+https://django-oauth-toolkit.readthedocs.io/en/latest/
+
+
+auth = authenticate(request, username=name, password=pass1)
+if auth is not None: login(request,auth)
+@login_required(login_url='login')
+token = str(uuid.uuid4())
+subject = 'Your forget password link'
+    message = f'Hi, click on the link to reset your password http://127.0.0.1:8000/change-password/{token}/'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [email.email,]
+    send_mail(subject, message, email_from, recipient_list)
+tieude = m.cleaned_data["title"]
+request.user.is_authenticated:
+title1 = mydata.data['title']
+MEDIA_ROOT = '%s/home/static/' %BASE_DIR
+models.ImageField(upload_to='upload/%Y/%m')
+unique_together = ('subject', 'category')
+start.addEventListener('click', ()=>{
+        window.location.href = url+pk;
+     });
+
+JsonResponse({"data": question, "time": quiz.time,})->$.ajax
+
+for(const [question, answer] of Object.entries(res))
+list_display = ["id", "subject", "create_date", "ative", "course"] hien thi truowng
+    search_fields = ["subject", "course__subject"] tim kiem
+    list_filter = ["subject"] loc
+    readonly_fields = ["avatar"] thiet ke rieng cho truong nay
+
+/*tich hop CKEditer*/
+pip install django-ckeditor
+trong cai app: 'ckeditor', 'ckeditor_uploader'
+trong model: RichTextField() cho cai can tu ckeditor.fields
+CKEDITOR_UPLOAD_PATH = 'images/lessons/"
+trong urls chung: re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+trong admin: taoj form 
+class FormClass(forms.ModelForm):
+    cotent = forms.CharField(widget=CKEditorUploadingWidget)
+    class Meta:
+        model = Lesson
+        fields = "__all__"
+trong form cais chua them : form = FormClass
+thu vien: ckeditor_uploader.widgets import CKEditorUploadingWidget
+
+/*inline*/
+class LessonInline(admin.StackedInline):
+    model = Lesson
+    pk_name = 'course' ten khoa ngoai
+class CourseAdmin(admin.ModelAdmin):
+    inlines = (LessonInline,)
+AbstractUser: de mo rong user : them AUTH_USER_MODEL = 'app.tenclass'
+
+/* tich hop Swagger xem api*/
+pip install drf-yasg
+trong app cai: 'drf_yasg',
+trong urls chung: #URL của swagger
+    re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name = 'schema-redoc'),
+va: #Swagger hỗ trợ cho Api
+schema_view = get_schema_view(
+    openapi.Info(
+        title="CourseApp Api",
+        default_version='v1',
+        description='APIs for CourseApp',
+        contact=openapi.Contact(email="vinhngo240302@gmail.com"),
+        license=openapi.License(name='Vinh Ngô'),
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
+thu vien: from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+/*Rest Frameword*/
+pip install djangorestframework
+trong app cai: 'rest_framework',
+trong viewsset.ModelViewSet co queryset: laf cau truy van va serializer_class , permissions_classes
+phai dk router trong admin
+
+pip install -U django-jazzmin
+'jazzmin',
+https://django-jazzmin.readthedocs.io/
+SECRET_KEY = 'django-insecure-%o9!c3rf02q6usr!vw^s96^t*(dsv&ezbs)_u_k7^z1oa$ik0r'
+
+/*django shortuuid*/
+https://pypi.org/project/django-shortuuidfield/
+from shortuuid.django_fields import ShortUUIDField
+ShortUUIDField(unique=True, length=10, max_length=30, prefix="cat")
+
+https://django-taggit.readthedocs.io/en/latest/getting_started.html
+'taggit',
+
+https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
+----------------------------------------------------------------------------------------------------------
+sudo dnf update -y
+sudo dnf install git -y
+git clone
+sudo dnf install pip -y
+
+sudo yum install httpd -y
+sudo service httpd start
+sudo systemctl ebable httpd
+cd /var/ww/html
+sudo vi index.html
+
+-------------------------------------------------------------------------------------------------------------------
+Tailwind
+p, pl, pr, px, pt, pb: padding
+
+
+
+
