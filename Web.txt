@@ -240,6 +240,7 @@ https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
 sudo dnf update -y
 sudo dnf install git -y
 git clone
+ls -lrt
 sudo dnf install pip -y
 
 sudo yum install httpd -y
