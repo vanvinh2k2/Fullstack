@@ -253,6 +253,14 @@ sudo vi index.html
 Tailwind
 p, pl, pr, px, pt, pb: padding
 
-
+-----------------------------------------------------------------------------------------------------------------
+//JAVA SPRING BOOT
+@ComponentScan("com.example.deomo.app") || @ComponentScan({"com.example.deomo.app", ""}) chỉ tìm component trong app
+@Autowired tự động tìm và khởi tạo Interface phù hợp
+@Scope("prototype") giúp tạo biến thứ 2 là bộ nhớ khác
+@Primary nếu 2 cái class cùng trỏ vào 1 Interface thì ưu tiên cái nào hơn
+@Controller tiếp nhận request
+@Service xử lý logic
+@Repository giao tiếp với database
 
 
