@@ -14,5 +14,5 @@ jobs:
 
     - name: Create release
       run: |
-        VERSION = ${{ github.event.release.tag_name }}
+        $VERSION = ${{ github.event.release.tag_name }}
         echo "Building version $VERSION"
