@@ -1,0 +1,18 @@
+name: CI/CD Pipeline
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build_and_deploy:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Create release
+      run: |
+        VERSION = ${{ github.event.release.tag_name }}
+        echo "Building version $VERSION"
